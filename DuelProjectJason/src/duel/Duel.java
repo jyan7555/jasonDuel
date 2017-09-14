@@ -26,7 +26,7 @@ public class Duel {
 	public void dukeItOut(){
 		
 	}
-	//update6
+	//update6s
 
 }
 
