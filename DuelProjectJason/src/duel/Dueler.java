@@ -9,6 +9,9 @@ public interface Dueler {
 	
 	//returns the name of the Dueler
 	String getName();
-	//update7
 	
+	//set the value of a field. Write this in such a way that it can only be called once (by the Duel, at the start)
+	void setStartingHP(int hp);
+	//returns the value of HP, can be called as often as anyone wants
+	int getHP();
 }
