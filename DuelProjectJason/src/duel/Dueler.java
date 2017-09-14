@@ -9,6 +9,6 @@ public interface Dueler {
 	
 	//returns the name of the Dueler
 	String getName();
-	//update2
+	//update3
 	
 }
