@@ -8,7 +8,7 @@ public class CharacterA implements Dueler{
 	public void taunt() {
 		System.out.println("!?!");
 	}
-	public String getName(i) {
+	public String getName() {
 		return "Character A";
 	}
 	public void setStartingHP(int hp) {
