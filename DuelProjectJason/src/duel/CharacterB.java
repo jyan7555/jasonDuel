@@ -31,8 +31,7 @@ public class CharacterB implements Dueler {
 	}
 
 	public int getAction(Object caller) {
-		if (caller == this)
-		{
+		if (caller instanceof Duel){
 			return (int)(Math.random() * 2);
 		}
 		else {
@@ -41,7 +40,10 @@ public class CharacterB implements Dueler {
 	}
 
 	public void hit(Object caller) {
-
+		if (caller instanceof Duel){
+		this.hp += -10;
+		}
+		
 	}
 
 }
