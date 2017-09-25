@@ -27,5 +27,16 @@ public class CharacterA implements Dueler{
 			return false;
 		}
 	}
+	public int getAction(Object caller){
+		if (caller instanceof Duel) {
+			return (int) Math.random()*2;
+		}
+		else
+			return 3;
+	}
+	public void hit (Object caller){
+		if (caller instanceof Duel)
+		this.hp += -10;
+	}
 }
 	
