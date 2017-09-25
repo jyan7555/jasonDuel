@@ -54,4 +54,4 @@ public class CharacterA implements Dueler{
 	}
 }
 	
-
+//1
