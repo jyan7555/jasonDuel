@@ -2,7 +2,7 @@ package duel;
 
 public class CharacterB implements Dueler {
 	private int hp;
-	
+	private boolean gunloaded;
 	public void taunt() {
 		System.out.println("THIS ISN'T EVEN MY FINAL FORM");
 	}
@@ -32,16 +32,27 @@ public class CharacterB implements Dueler {
 
 	public int getAction(Object caller) {
 		if (caller instanceof Duel){
-			return (int)(Math.random() * 2);
+			if (gunloaded == true)
+			{	
+				if ((int)((Math.random() * 2)+1)== 1) {
+					gunloaded = false;
+					return 1;
+				}
+				if ((int)((Math.random() * 2)+1)== 2) {
+					return 2;
+				}
+			}
+			if (gunloaded == false) {
+				gunloaded = true;
+				return 0;
+			}
 		}
-		else {
-			return 3;
-		}
+		return 3;
 	}
 
 	public void hit(Object caller) {
 		if (caller instanceof Duel){
-		this.hp += -10;
+		hp += -10;
 		}
 		
 	}
