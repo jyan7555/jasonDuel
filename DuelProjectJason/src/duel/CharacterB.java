@@ -3,6 +3,7 @@ package duel;
 public class CharacterB implements Dueler {
 	private int hp;
 	private boolean gunloaded;
+	private int placeholder;
 	public void taunt() {
 		System.out.println("THIS ISN'T EVEN MY FINAL FORM");
 	}
@@ -30,15 +31,19 @@ public class CharacterB implements Dueler {
 		return false;
 	}
 
+	public int getPh() {
+		return placeholder = (int)((Math.random() * 2)+1);
+	}
 	public int getAction(Object caller) {
+		getPh();
 		if (caller instanceof Duel){
 			if (gunloaded == true)
 			{	
-				if ((int)((Math.random() * 2)+1)== 1) {
+				if (placeholder == 1) {
 					gunloaded = false;
 					return 1;
 				}
-				if ((int)((Math.random() * 2)+1)== 2) {
+				if (placeholder == 2) {
 					return 2;
 				}
 			}

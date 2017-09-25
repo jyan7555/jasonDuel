@@ -32,7 +32,7 @@ public class CharacterA implements Dueler{
 		}
 	}
 	public int getAction(Object caller){
-		if (caller instanceof Duel) {
+		if (caller instanceof Duel) {	
 			if (this.getLoadStat()) {
 				loaded = false;
 				return 1;
