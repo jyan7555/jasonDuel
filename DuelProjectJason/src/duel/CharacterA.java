@@ -39,4 +39,4 @@ public class CharacterA implements Dueler{
 		this.hp += -10;
 	}
 }
-	
+	// :-)
