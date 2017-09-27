@@ -10,10 +10,7 @@ public class CharacterA implements Dueler{
 		System.out.println("!?!");
 	}
 	public String getName() {
-		return "its me";
-	}
-	public boolean getLoadStat() {
-		return loaded;
+		return "A";
 	}
 	public void setStartingHP(int hp) {
 		this.hp = hp;
@@ -33,7 +30,7 @@ public class CharacterA implements Dueler{
 	}
 	public int getAction(Object caller){
 		if (caller instanceof Duel) {	
-			if (this.getLoadStat()) {
+			if (loaded) {
 				loaded = false;
 				return 1;
 			}
